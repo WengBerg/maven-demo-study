@@ -22,6 +22,22 @@
                 <groupId>me.berg.study</groupId>
                 <artifactId>mymavenplugin</artifactId>
                 <version>1.1-snapshot</version>
+                <configuration>
+                    <message>test meassage</message>
+                    <stringList>
+                        <str>1</str>
+                        <str>2</str>
+                        <str>3</str>
+                    </stringList>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>testPlugin</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
