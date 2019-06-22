@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.berg.study</groupId>
+    <version>1.1-snapshot</version>
+    <artifactId>testmymavenplugin</artifactId>
+
+    <parent>
+        <artifactId>maven</artifactId>
+        <groupId>me.berg.study</groupId>
+        <version>1.1-snapshot</version>
+    </parent>
+
+    <build>
+        <plugins>
+<!--            天坑 这里必须要先把自己包先打包到本地库当中
+            然后再去引用，否则就会出现从中心库下载包的情况-->
+            <plugin>
+                <groupId>me.berg.study</groupId>
+                <artifactId>mymavenplugin</artifactId>
+                <version>1.1-snapshot</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

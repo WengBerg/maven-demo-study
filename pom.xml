@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--    maven 学习多模块父pom-->
+    <groupId>me.berg.study</groupId>
+    <artifactId>maven</artifactId>
+    <version>1.1-snapshot</version>
+    <packaging>pom</packaging>
+    <properties>
+        <!--        maven 插件开发-->
+        <maven.plugindevelop.version>3.6.0</maven.plugindevelop.version>
+<!--        maven 统一版本控制-->
+        <maven.plugin.versions.version>2.7</maven.plugin.versions.version>
+    </properties>
+<!--    管理的子模块-->
+    <modules>
+        <module>./mymavenplugin</module>
+        <module>./testmymavenplugin</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>${maven.plugindevelop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${maven.plugindevelop.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>${maven.plugin.versions.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
