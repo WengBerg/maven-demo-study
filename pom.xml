@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <!--    maven 学习多模块父pom-->
     <groupId>me.berg.study</groupId>
@@ -11,13 +9,15 @@
     <properties>
         <!--        maven 插件开发-->
         <maven.plugindevelop.version>3.6.0</maven.plugindevelop.version>
-<!--        maven 统一版本控制-->
+        <!--        maven 统一版本控制-->
         <maven.plugin.versions.version>2.7</maven.plugin.versions.version>
     </properties>
-<!--    管理的子模块-->
+    <!--    管理的子模块-->
     <modules>
         <module>./mymavenplugin</module>
         <module>./testmymavenplugin</module>
+        <module>./myarchetype</module>
+        <module>./mytestarchetype</module>
     </modules>
 
     <dependencyManagement>

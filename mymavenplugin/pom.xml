@@ -8,6 +8,7 @@
     <artifactId>mymavenplugin</artifactId>
     <version>1.1-snapshot</version>
     <packaging>maven-plugin</packaging>
+
 <!--    继承的父模块-->
     <parent>
         <groupId>me.berg.study</groupId>
