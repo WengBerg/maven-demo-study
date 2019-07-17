@@ -23,6 +23,7 @@
                 <artifactId>mymavenplugin</artifactId>
                 <version>1.1-snapshot</version>
                 <configuration>
+<!--                    这些都是设置的参数-->
                     <message>test meassage</message>
                     <stringList>
                         <str>1</str>
@@ -34,8 +35,10 @@
                 <executions>
                     <execution>
                         <id>one</id>
+<!--                        绑定的生命周期-->
                         <phase>verify</phase>
                         <goals>
+<!--                            插件的目标功能-->
                             <goal>testPlugin</goal>
                         </goals>
                     </execution>
